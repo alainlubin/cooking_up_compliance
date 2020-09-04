@@ -35,6 +35,15 @@ describe file('/proc/cpuinfo') do
   its('size') { should be < 1000 }
 end
 ```
+
+### be_in
+Verifies that an item is included in a list.  
+  
+```ruby
+describe resource do
+  its('item') { should be_in LIST }
+end
+```
   
 ### cmp
 Unlike eq, cmp is a matcher for less-restrictive comparisons. It will try to fit the actual value to the type you are comparing it to. This is meant to relieve the user from having to write type-casts and resolutions.  
@@ -123,15 +132,6 @@ Verifies if a value is included in a list.
 ```ruby
 describe passwd do
   its('users') { should include 'my_user' }
-end
-```
-  
-### be_in
-Verifies that an item is included in a list.  
-  
-```ruby
-describe resource do
-  its('item') { should be_in LIST }
 end
 ```
   
