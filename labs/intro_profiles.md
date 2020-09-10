@@ -75,7 +75,7 @@ inspec check examples/profile
 ### Platform Support
 
 Use the supports setting in the inspec.yml file to specify one (or more) platforms for which a profile is targeting.   
-You can target all platforms in a single inspec.yml file:
+You can target many platforms in a single inspec.yml file:
 ```yml
 name: ssh
 supports:
